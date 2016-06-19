@@ -13,8 +13,4 @@ import {
 import { PoolsComponent } from './pools.component';
 
 describe('Component: Pools', () => {
-  it('should create an instance', () => {
-    let component = new PoolsComponent();
-    expect(component).toBeTruthy();
-  });
 });
