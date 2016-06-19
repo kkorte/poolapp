@@ -1,0 +1,26 @@
+<div class="form-view">
+  <md-card>
+    <md-card-title>Team toevoegen</md-card-title>
+    <form (ngSubmit)="onSubmit()" #teamForm="ngForm">
+      <md-input placeholder="Naam" value="" style="width: 100%;"
+        [(ngModel)]="model.name">
+      </md-input>
+      <button md-raised-button color="primary">SUBMIT</button>
+    </form>
+  </md-card>
+</div>
+<div class="list-view">
+  <md-card>
+    <md-list>
+       <md-list-item *ngFor="let team of teams | async">
+        <h4 md-line>{{ team.name }}</h4>
+        <button md-icon-button (click)="test()">
+          <md-icon class="md-24">edit</md-icon>
+        </button>
+        <button md-icon-button (click)="delete(team.$key)">
+          <md-icon class="md-24">delete</md-icon>
+        </button>
+       </md-list-item>
+    </md-list>
+  </md-card>
+</div>

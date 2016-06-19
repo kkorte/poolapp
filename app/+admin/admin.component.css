@@ -1,0 +1,19 @@
+.app-content {
+  padding: 20px;
+}
+
+.sidenav-toolbar {
+  height: 63px;
+  border-bottom: 1px solid #eee;
+  line-height: 63px;
+}
+
+.sidenav-toolbar button {
+  position: absolute;
+  right: 6px;
+  top: 12px;
+}
+
+md-sidenav {
+  width: 300px;
+}
