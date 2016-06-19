@@ -1,0 +1,40 @@
+<md-sidenav-layout fullscreen>
+
+  <md-sidenav #sidenav mode="side">
+    <div class="sidenav-toolbar">
+      <button md-icon-button (click)="sidenav.close()">
+        <md-icon>chevron_left</md-icon>
+      </button>
+    </div>
+    <md-nav-list>
+      <a md-list-item [routerLink]="['/admin']">
+        <md-icon md-list-icon>home</md-icon>
+        <span md-line>index</span>
+      </a>
+      <a md-list-item [routerLink]="['/admin/teams']">
+        <md-icon md-list-icon>group</md-icon>
+        <span md-line>teams</span>
+      </a>
+      <a md-list-item [routerLink]="['/admin/groups']">
+        <md-icon md-list-icon>poll</md-icon>
+        <span md-line>groups</span>
+      </a>
+      <a md-list-item [routerLink]="['/admin/pools']">
+        <md-icon md-list-icon>poll</md-icon>
+        <span md-line>pools</span>
+      </a>
+    </md-nav-list>
+  </md-sidenav>
+
+  <md-toolbar color="warn">
+    <button md-icon-button (click)="sidenav.open()">
+      <md-icon>menu</md-icon>
+    </button>
+    {{title}}
+  </md-toolbar>
+
+  <div class="app-content">
+    <router-outlet></router-outlet>
+  </div>
+
+</md-sidenav-layout>

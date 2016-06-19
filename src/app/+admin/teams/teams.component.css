@@ -1,0 +1,25 @@
+
+/* forms */
+md-card + md-card {
+  margin-top: 8px;
+}
+
+button[md-fab] {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+}
+
+.list-view {
+  width: 300px;
+  float: left;
+}
+
+.form-view {
+  width: 500px;
+  float: left;
+}
+
+.form-view + .list-view {
+  margin-left: 16px;
+}
